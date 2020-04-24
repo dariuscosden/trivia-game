@@ -1,11 +1,19 @@
 import React from "react";
 
+// External dependencies
+//
+import { BrowserRouter as Router } from "react-router-dom";
+
 // Internal dependencies
 //
-import Homepage from "./containers/homepage";
+import Layout from "./containers/layout";
 
 const App = () => {
-  return <Homepage />;
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
 };
 
 export default App;

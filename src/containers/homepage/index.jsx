@@ -1,5 +1,9 @@
 import React from "react";
 
+// External dependencies
+//
+import { useHistory } from "react-router-dom";
+
 // Internal dependencies
 //
 import HeadlineCard from "../../components/headline-card";
@@ -7,6 +11,8 @@ import InfoCard from "../../components/info-card";
 import Button from "../../components/button";
 
 const Homepage = () => {
+  const history = useHistory();
+
   return (
     <div className="homepage">
       <div className="homepage__headline">
@@ -25,7 +31,7 @@ const Homepage = () => {
         </HeadlineCard>
       </div>
       <div className="homepage__button">
-        <Button text="Start Game" />
+        <Button text="Start Game" onClick={() => history.push("/quiz")} />
       </div>
     </div>
   );
